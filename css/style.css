@@ -19,3 +19,14 @@
         #dcdcdc 100%
     );
 }
+
+/* MAIN */
+
+.container {
+    position: absolute;
+    top: 2.5%;
+    left: 15%;
+    width: 70%;
+    height: 95%;
+    background-color: gray;
+}

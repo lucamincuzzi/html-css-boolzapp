@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* VIEWPORT SETTINGS */
 
 .wrapper {
@@ -21,7 +25,7 @@
 
 /* Debug */
 
-.app-container > * {
+.app-container * {
     border: 1px solid black;
 }
 
@@ -37,13 +41,51 @@
     background-color: gray;
 }
 
+/* Left side of the app */
+
 .left-sidebar {
     width: 30%;
+    /* Debug */
+    background-color: white;
 }
+
+.left-sidebar .header {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    background-color: lightgray;
+}
+
+.left-sidebar .header img {
+    border-radius: 50%;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.left-sidebar ul {
+    position: relative;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.left-sidebar li {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+/* Right side of the app */
 
 .right-sidebar {
     width: 70%;
 }
+
+/* Tablet */
 
 @media screen and (max-width: 540px) {
     .app-container {
@@ -56,10 +98,16 @@
         width: 15%;
     }
 
+    .left-sidebar .actions {
+        display: none;
+    }
+
     .right-sidebar {
         width: 85%;
     }
 }
+
+/* Mobile */
 
 @media screen and (max-width: 504px) {
     .left-sidebar {

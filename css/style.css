@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: gra;
 }
 
 /* VIEWPORT SETTINGS */
@@ -20,9 +19,16 @@
     );
 }
 
+/* Debug */
+
+.app-container > * {
+    border: 1px solid black;
+}
+
 /* MAIN */
 
-.container {
+.app-container {
+    display: flex;
     position: relative;
     top: 2.5%;
     left: 10%;
@@ -31,10 +37,36 @@
     background-color: gray;
 }
 
-@media screen and (max-width: 768px) {
-    .container {
+.left-sidebar {
+    width: 30%;
+}
+
+.right-sidebar {
+    width: 70%;
+}
+
+@media screen and (max-width: 540px) {
+    .app-container {
         position: static;
         width: 100%;
         height: 100%;
+    }
+
+    .left-sidebar {
+        width: 15%;
+    }
+
+    .right-sidebar {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 504px) {
+    .left-sidebar {
+        display: none;
+    }
+
+    .right-sidebar {
+        width: 100%;
     }
 }

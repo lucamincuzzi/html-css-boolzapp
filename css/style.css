@@ -39,6 +39,13 @@ body {
     font-family: sans-serif;
 }
 
+.left-sidebar .header img, .contact-item img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: 1rem;
+}
+
 /* MAIN */
 
 .app-container {
@@ -66,14 +73,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 10%;
-    background-color: lightgray;
-}
-
-.left-sidebar .header img {
-    border-radius: 50%;
-    margin-left: 1rem;
-    width: 60px;
-    height: 60px;
+    background-color: #eaeaea;
 }
 
 .left-sidebar .header ul {
@@ -113,8 +113,8 @@ body {
     margin-left: 1rem;
     background-color: white;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 .bell i {
@@ -150,6 +150,43 @@ body {
     width: 70%;
     outline: none;
     border: none;
+}
+
+/* Contatti */
+
+.contacts {
+    list-style-type: none;
+    height: 75%;
+    overflow-y: auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    height: calc(100% / 7);
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+.contact-content {
+    margin-left: 1rem;
+    width: 60%;
+}
+
+.contact-name {
+    margin-bottom: 2px;
+}
+
+.recent-text {
+    font-size: .8rem;
+    color: gray;
+    opacity: .5;
+}
+
+.recent-text-time {
+    position: relative;
+    top: -15px;
+    color: lightgray;
+    font-size: .7rem;
 }
 
 /* Sidebar destra */

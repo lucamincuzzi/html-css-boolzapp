@@ -26,7 +26,17 @@ img {
 /* Debug */
 
 .app-container * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+/* COMMON */
+
+i {
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: sans-serif;
 }
 
 /* MAIN */
@@ -41,7 +51,7 @@ img {
     background-color: gray;
 }
 
-/* Left side of the app */
+/* Sidebar sinistra */
 
 .left-sidebar {
     width: 30%;
@@ -49,9 +59,12 @@ img {
     background-color: white;
 }
 
+/* Header sinistro */
+
 .left-sidebar .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 10%;
     background-color: lightgray;
 }
@@ -59,27 +72,88 @@ img {
 .left-sidebar .header img {
     border-radius: 50%;
     position: relative;
-    left: 10px;
-    top: 10px;
+    margin-left: 1rem;
     width: 60px;
     height: 60px;
 }
 
-.left-sidebar ul {
-    position: relative;
-    right: 10px;
+.left-sidebar .header ul {
     display: flex;
-    align-items: center;
     gap: 1rem;
+    margin-right: 1.5rem;
     list-style-type: none;
 }
 
-.left-sidebar li {
-    font-size: 1.5rem;
+.left-sidebar .header li {
     color: grey;
 }
 
-/* Right side of the app */
+/* Notifiche */
+
+.left-sidebar .notification {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 10%;
+    background-color: #8edafc;
+}
+
+.notification-text h4 {
+    margin-bottom: 5px;
+}
+
+.notification-text span {
+    color: gray;
+    text-decoration: underline;
+}
+
+.notification .bell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.bell i {
+    color: #8edafc;
+}
+
+/* Casella di ricerca */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    height: 5%;
+    background-color: #fafafa;
+}
+
+.search-control {
+    margin: 0 auto;
+    background-color: white;
+    width: 95%;
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fa-search {
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: rgb(196, 196, 196);
+}
+
+.search-bar input {
+    width: 70%;
+    outline: none;
+    border: none;
+}
+
+/* Sidebar destra */
 
 .right-sidebar {
     width: 70%;

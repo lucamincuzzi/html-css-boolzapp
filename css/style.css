@@ -71,7 +71,6 @@ body {
 
 .left-sidebar .header img {
     border-radius: 50%;
-    position: relative;
     margin-left: 1rem;
     width: 60px;
     height: 60px;
@@ -159,6 +158,12 @@ body {
     width: 70%;
 }
 
+@media screen and (max-width: 855px) {
+    .left-sidebar .notification {
+        display: none;
+    }
+}
+
 /* Tablet */
 
 @media screen and (max-width: 540px) {
@@ -172,8 +177,16 @@ body {
         width: 15%;
     }
 
-    .left-sidebar .actions {
+    .left-sidebar .header .actions, .left-sidebar .search-bar {
         display: none;
+    }
+    
+    .left-sidebar .header {
+        justify-content: center;
+    }
+
+    .left-sidebar .header img {
+        margin: 0;
     }
 
     .right-sidebar {

@@ -196,7 +196,7 @@ body {
 }
 
 @media screen and (max-width: 855px) {
-    .left-sidebar .notification {
+    .left-sidebar .notification, .left-sidebar .contact-content, .left-sidebar .recent-text-time {
         display: none;
     }
 }
@@ -218,11 +218,11 @@ body {
         display: none;
     }
     
-    .left-sidebar .header {
+    .left-sidebar .header, .left-sidebar .contact-item {
         justify-content: center;
     }
 
-    .left-sidebar .header img {
+    .left-sidebar .header img, .left-sidebar .contact-item img {
         margin: 0;
     }
 

@@ -39,11 +39,35 @@ body {
     font-family: sans-serif;
 }
 
-.left-sidebar .header img, .contact-item img {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    background-color: #eaeaea;
+}
+
+.header img, .contact-item img {
     border-radius: 50%;
     width: 60px;
     height: 60px;
     margin-left: 1rem;
+}
+
+.header ul {
+    display: flex;
+    gap: 1.2rem;
+    margin-right: 1.5rem;
+    list-style-type: none;
+}
+
+.header li {
+    color: rgba(128, 128, 128, 0.5);
+}
+
+.recent-text, .last-seen {
+    font-size: .85rem;
+    color: gray;
 }
 
 /* MAIN */
@@ -60,31 +84,13 @@ body {
 
 /* Sidebar sinistra */
 
+.left-sidebar .header {
+    border-right: 1px solid rgba(128, 128, 128, 0.5);
+}
+
 .left-sidebar {
     width: 30%;
-    /* Debug */
     background-color: white;
-}
-
-/* Header sinistro */
-
-.left-sidebar .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10%;
-    background-color: #eaeaea;
-}
-
-.left-sidebar .header ul {
-    display: flex;
-    gap: 1rem;
-    margin-right: 1.5rem;
-    list-style-type: none;
-}
-
-.left-sidebar .header li {
-    color: grey;
 }
 
 /* Notifiche */
@@ -140,7 +146,7 @@ body {
     gap: 1rem;
 }
 
-.fa-search {
+.search-bar .fa-search {
     margin-left: 1rem;
     font-size: 1rem;
     color: rgb(196, 196, 196);
@@ -177,8 +183,6 @@ body {
 }
 
 .recent-text {
-    font-size: .8rem;
-    color: gray;
     opacity: .5;
 }
 
@@ -191,8 +195,22 @@ body {
 
 /* Sidebar destra */
 
+/* Header */
+
 .right-sidebar {
     width: 70%;
+}
+
+.current-chat {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Chat */
+
+.right-sidebar main {
+    height: 80%;
 }
 
 @media screen and (max-width: 855px) {
@@ -245,7 +263,7 @@ body {
 /* Mobile */
 
 @media screen and (max-width: 504px) {
-    .left-sidebar {
+    .left-sidebar, .right-sidebar .actions {
         display: none;
     }
 

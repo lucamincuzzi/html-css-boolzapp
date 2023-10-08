@@ -70,6 +70,12 @@ body {
     color: gray;
 }
 
+.sent, .received {
+    max-width: 70%;
+    border-radius: 10px;
+    height: 95%;
+}
+
 /* MAIN */
 
 .app-container {
@@ -211,6 +217,50 @@ body {
 
 .right-sidebar main {
     height: 80%;
+    background-image: url(../img/mine.jpg);
+    overflow-y: auto;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.sent {
+    align-self: flex-end;
+    background-color: #d5f9ba;
+}
+
+.received {
+    background-color: #ffff;
+}
+
+.text-content {
+    display: flex;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+.fa-chevron-down {
+    font-size: .9rem;
+    color: rgba(128, 128, 128, 0.5);
+}
+
+.chat-box p {
+    display: flex;
+    width: 95%;
+}
+
+.text-time-sent {
+    display: block;
+    text-align: right;
+    padding: 0 5px 3px;
+    font-size: .75rem;
+    color: rgba(128, 128, 128, 0.5);
 }
 
 @media screen and (max-width: 855px) {
@@ -219,9 +269,16 @@ body {
     }
 }
 
+@media screen and (max-width: 730px) {
+    .left-sidebar .actions li:nth-of-type(2){
+        display: none;
+    }
+}
+
 /* Tablet */
 
 @media screen and (max-width: 540px) {
+    /* App */
     .app-container, .contacts {
         height: 100%;
     }
@@ -231,11 +288,17 @@ body {
         width: 100%;
     }
 
+    /* Sidebar sinistra */
+
     .left-sidebar {
         width: 15%;
     }
 
-    .left-sidebar .header .actions, .left-sidebar .search-bar {
+    .left-sidebar .actions {
+        display: none;
+    }
+
+    .left-sidebar .search-bar {
         display: none;
     }
 
@@ -255,8 +318,18 @@ body {
         margin: 0;
     }
 
+    /* Sidebar destra */
+
     .right-sidebar {
         width: 85%;
+    }
+
+    .chat-box {
+        width: 90%;
+    }
+
+    .sent, .received {
+        max-width: 80%;
     }
 }
 

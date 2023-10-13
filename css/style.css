@@ -1,3 +1,13 @@
+:root {
+    --left-sidebar-width: 350px;
+}
+
+@media screen and (max-width: 796px;) {
+    :root {
+        --left-sidebar-width: 200px;
+    }
+}
+
 /* RESET */
 
 * {
@@ -96,7 +106,7 @@ body {
 }
 
 .left-sidebar {
-    width: 30%;
+    width: 350px;
     background-color: white;
 }
 
@@ -205,7 +215,7 @@ body {
 /* Header */
 
 .right-sidebar {
-    width: 70%;
+    width: calc(100% - var(--left-sidebar-width));
 }
 
 .current-chat {
